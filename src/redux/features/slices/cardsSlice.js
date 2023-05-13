@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { cardsData } from "../../App/data/cardsData"
+import { cardsData } from "../../../App/data/cardsData"
 
 const initialState = {
     cards: cardsData
@@ -13,5 +13,4 @@ export const cardsSlice = createSlice({
     }
 })
 
-
-export default cardsSlice.reducer
+export default cardsSlice;

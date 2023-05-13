@@ -1,9 +1,11 @@
 import { useSelector } from 'react-redux'
 import { Card } from '../CardItem/Card';
 import './cardList.scss';
+import { openCloseModal, chooseModalImage } from '../../redux/features/slices/modalSlice';
 
 export const CardList = () => {
     const cards = useSelector(state => state.cards.cards);
+    const modalImage = useSelector(state => state.modal.modal)
 
     //Render list of cards, if cardList is empty show message
     const renderCardList = (arr) => {
@@ -12,7 +14,13 @@ export const CardList = () => {
         }
 
         return arr.map(({ id, ...props }) => {
-            return <Card key={id} {...props} />
+            return <Card
+                key={id}
+                {...props}
+                modalImage={modalImage}
+                openCloseModal={openCloseModal}
+                chooseModalImage={chooseModalImage}
+            />
         })
     }
 
