@@ -16,50 +16,50 @@ import Img12 from '../assets/images/12.jpg';
 export const cardsData = [
     {
         id: uuidv4(),
-        imgage: Img1
+        image: Img1
     },
     {
         id: uuidv4(),
-        imgage: Img2
+        image: Img2
     },
     {
         id: uuidv4(),
-        imgage: Img3
+        image: Img3
     },
     {
         id: uuidv4(),
-        imgage: Img4
+        image: Img4
     },
     {
         id: uuidv4(),
-        imgage: Img5
+        image: Img5
     },
     {
         id: uuidv4(),
-        imgage: Img6
+        image: Img6
     },
     {
         id: uuidv4(),
-        imgage: Img7
+        image: Img7
     },
     {
         id: uuidv4(),
-        imgage: Img8
+        image: Img8
     },
     {
         id: uuidv4(),
-        imgage: Img9
+        image: Img9
     },
     {
         id: uuidv4(),
-        imgage: Img10
+        image: Img10
     },
     {
         id: uuidv4(),
-        imgage: Img11
+        image: Img11
     },
     {
         id: uuidv4(),
-        imgage: Img12
+        image: Img12
     },
 ]

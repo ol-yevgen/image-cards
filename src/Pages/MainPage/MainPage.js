@@ -1,6 +1,14 @@
+import { Header } from "../../App/layouts/Header/Header";
+import { CardList } from "../../components/CardList/CardList";
+
 const MainPage = () => {
-   return(
-       <div>MainPage</div>
+    return (
+        <>
+            <Header />
+            <section>
+                <CardList />
+            </section>
+        </>
    )
 }
 
