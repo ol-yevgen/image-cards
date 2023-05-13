@@ -4,12 +4,15 @@
 .modal {
     @include flex_container-center;
     position: fixed;
-    z-index: 100;
 
     width: 100%;
     height: 100vh;
 
     overflow: hidden;
+    opacity: 0;
+
+    transform: scale(.9);
+    transition: all .3s ease-out;
 
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
@@ -24,8 +27,8 @@
 
     &__close {
         position: absolute;
-        top: 3rem;
-        right: 13%;
+        top: 2rem;
+        right: 5rem;
 
         &:hover {
             cursor: pointer;
@@ -51,6 +54,10 @@
 .open {
     top: 0;
     left: 0;
+    z-index: 100;
+
+    opacity: 1;
+    transform: scale(1);
 }
 
 .scroll {
@@ -58,5 +65,5 @@
 }
 
 .close {
-    left: -100%;
+    z-index: -1;
 }

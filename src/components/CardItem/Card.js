@@ -1,8 +1,12 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
+import { useImageLazyLoading } from "../../hooks/useImageLazyLoading";
+import placeholder from "../../App/assets/placeholder.png"
+
 export const Card = ({ image, openCloseModal, chooseModalImage}) => {
     const dispatch = useDispatch();
+    const imageLazyLoading = useImageLazyLoading(image)
     
     const modal = useCallback(() => {
         dispatch(openCloseModal())
@@ -14,7 +18,7 @@ export const Card = ({ image, openCloseModal, chooseModalImage}) => {
            className="card"
            onClick={modal}
        >
-           <img src={image} alt="img" />
+           <img src={imageLazyLoading || placeholder} alt="img" />
        </li>
    )
 }

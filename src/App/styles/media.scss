@@ -36,7 +36,18 @@
         }
 
         &:hover {
-        border: 5px solid $borderHoverColor;
+            border: 5px solid $borderHoverColor;
+        }
+    }
+
+    .modal {
+        &__content {
+            position: relative;
+        }
+
+        &__close {
+            top: -2rem;
+            right: -2rem;
         }
     }
 }
@@ -68,7 +79,7 @@
         }
 
         &:hover {
-        border: 5px solid $borderHoverColor;
+            border: 5px solid $borderHoverColor;
         }
     }
 }
