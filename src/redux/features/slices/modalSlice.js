@@ -13,7 +13,6 @@ export const modalSlice = createSlice({
             state.modal = !state.modal
         },
         chooseModalImage: (state, action) => {
-            console.log(action.payload);
             state.modalImage = action.payload
         }
 

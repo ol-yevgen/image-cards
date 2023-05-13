@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux'
 import { Card } from '../CardItem/Card';
-import './cardList.scss';
 import { openCloseModal, chooseModalImage } from '../../redux/features/slices/modalSlice';
 
 export const CardList = () => {

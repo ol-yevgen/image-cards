@@ -1,0 +1,74 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@media (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        &:nth-child(4n + 1) {
+            border: 5px solid $borderColor;
+        }
+
+        &:nth-child(3n + 1) {
+            border: 5px solid $firstChildInGridBorderColor;
+        }
+
+        &:hover {
+            border: 5px solid $borderHoverColor;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        &:nth-child(3n + 1) {
+            border: 5px solid $borderColor;
+        }
+
+        &:nth-child(2n + 1) {
+            border: 5px solid $firstChildInGridBorderColor;
+        }
+
+        &:hover {
+        border: 5px solid $borderHoverColor;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header__container {
+        flex-direction: column-reverse;
+        font-size: 1.5rem;
+
+        & > :last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header__container {
+        flex-direction: column-reverse;
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        &:nth-child(2n + 1) {
+            border: 5px solid $borderColor;
+        }
+
+        &:hover {
+        border: 5px solid $borderHoverColor;
+        }
+    }
+}

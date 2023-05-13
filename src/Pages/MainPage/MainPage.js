@@ -4,13 +4,13 @@ import { CardList } from "../../components/CardList/CardList";
 
 const MainPage = () => {
     return (
-        <>
+        <div className="body__wrapper">
             <Header />
             <Modal/>
-            <section>
+            <main>
                 <CardList />
-            </section>
-        </>
+            </main>
+        </div>
    )
 }
 

@@ -1,5 +1,5 @@
-import { useCallback } from "react"
-import { useDispatch } from "react-redux"
+import { useCallback } from "react";
+import { useDispatch } from "react-redux";
 
 export const Card = ({ image, openCloseModal, chooseModalImage}) => {
     const dispatch = useDispatch();
@@ -11,9 +11,10 @@ export const Card = ({ image, openCloseModal, chooseModalImage}) => {
     
    return(
        <li
+           className="card"
            onClick={modal}
        >
-           <img src={image} alt="img"/>
+           <img src={image} alt="img" />
        </li>
    )
 }

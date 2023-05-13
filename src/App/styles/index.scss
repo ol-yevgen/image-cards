@@ -5,19 +5,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font-size: 62.5%;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 
     min-width: 320px;
     width: 100%;
     height: 100vh;
 
-    overflow-x: hidden;
 }
 
 ul,
@@ -54,14 +50,15 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-main {
-    position: relative;
-    padding: 3rem;
-}
-
 ::before,
 ::after {
     letter-spacing: normal;
 }
 
-@import '../../pages/MainPage/mainPage.scss';
+
+@import '../../App/layouts/Header/header.scss';
+@import '../../components/Modal/modal.scss';
+@import '../../Pages/MainPage/mainPage.scss';
+@import '../../components/CardList/cardList.scss';
+@import '../../components/CardItem/card.scss';
+@import './media.scss';

@@ -1,2 +1,18 @@
-@import '../../components/CardList/cardList.scss';
-@import '../../components/CardItem/card.scss';
+@import '../../App/styles//mixins.scss';
+
+.body__wrapper {
+    margin: 0 auto;
+
+    width: 80%;
+    overflow: hidden;
+
+}
+
+main {
+    @include flex_container-center;
+    padding: 80px 0 50px 0;
+    
+    width: 100%;
+
+    overflow: hidden;
+}
