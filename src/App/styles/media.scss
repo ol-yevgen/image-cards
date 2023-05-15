@@ -7,16 +7,15 @@
     }
 
     .card {
-        &:nth-child(4n + 1) {
+        &:nth-child(4n + 1) &__image {
             border: 5px solid $borderColor;
         }
 
-        &:nth-child(3n + 1) {
+        &:nth-child(3n + 1) &__image {
             border: 5px solid $firstChildInGridBorderColor;
-        }
-
-        &:hover {
-            border: 5px solid $borderHoverColor;
+            &:hover {
+                border: 5px solid $borderHoverColor;
+            }
         }
     }
 }
@@ -27,16 +26,15 @@
     }
 
     .card {
-        &:nth-child(3n + 1) {
+        &:nth-child(3n + 1) &__image {
             border: 5px solid $borderColor;
         }
 
-        &:nth-child(2n + 1) {
+        &:nth-child(2n + 1) &__image {
             border: 5px solid $firstChildInGridBorderColor;
-        }
-
-        &:hover {
-            border: 5px solid $borderHoverColor;
+            &:hover {
+                border: 5px solid $borderHoverColor;
+            }
         }
     }
 
@@ -74,12 +72,12 @@
     }
 
     .card {
-        &:nth-child(2n + 1) {
-            border: 5px solid $borderColor;
-        }
 
-        &:hover {
-            border: 5px solid $borderHoverColor;
+        &:nth-child(1n) &__image {
+            border: 5px solid $borderColor;
+            &:hover {
+                border: 5px solid $borderHoverColor;
+            }
         }
     }
 }
