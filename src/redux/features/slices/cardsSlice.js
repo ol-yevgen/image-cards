@@ -9,12 +9,15 @@ export const cardsSlice = createSlice({
     name: 'cards',
     initialState,
     reducers: {
+        cardsRestore: (state, action) => {
+            state.cards = action.payload
+        },
         cardDeleted: (state, action) => {
             state.cards = state.cards.filter(item => item.id !== action.payload)
         }
     }
 })
 
-export const { cardDeleted } = cardsSlice.actions
+export const { cardsRestore, cardDeleted } = cardsSlice.actions
 
 export default cardsSlice;
