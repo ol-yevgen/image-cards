@@ -7,8 +7,6 @@
     width: 200px;
     height: 200px;
 
-    transition: all 0.3s ease-out;
-
     &:nth-child(4n + 1) &__image {
         border: 5px solid $firstChildInGridBorderColor;
 
@@ -24,8 +22,6 @@
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
-
-        transition: all 0.3s ease-out;
 
         border: 5px solid #4d4d4d;
         border-radius: 50%;
@@ -47,7 +43,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        transition: all 0.3s ease-out;
+        transition: all 0.5s ease-out;
     }
 
     &__delete {

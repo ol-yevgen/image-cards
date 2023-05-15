@@ -1,4 +1,15 @@
+@import '../../App/styles/variables';
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
 .cardList__title {
+    width: 100%;
     text-align: center;
 }
 
@@ -7,5 +18,42 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
+}
 
+.restore {
+    position: relative;
+    margin-top: 3rem;
+    padding: 1.5rem 5rem;
+
+    border: 1px solid $borderColor;
+
+    font-weight: 300;
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+    color: $borderColor;
+
+    transition: all 1.5s ease;
+    background: transparent;
+
+    &:hover {
+        cursor: pointer;
+        color: $borderHoverColor;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 0;
+        height: 100%;
+        background: $borderColor;
+        transition: all 1s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
 }

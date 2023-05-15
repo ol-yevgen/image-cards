@@ -1,31 +1,23 @@
-import { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Card } from '../CardItem/Card';
-import { cardDeleted } from '../../redux/features/slices/cardsSlice';
-import { openCloseModal, chooseModalImage } from '../../redux/features/slices/modalSlice';
+import { useDelete } from '../../hooks/useDelete';
+import { useToggleModal } from '../../hooks/useToggleModal';
 
 export const CardList = () => {
     const cards = useSelector(state => state.cards.cards);
+    const onDelete = useDelete();
+    const modal = useToggleModal();
 
-    const dispatch = useDispatch();
-
-    const modal = useCallback((image) => {
-        dispatch(openCloseModal())
-        dispatch(chooseModalImage(image))
-    }, [dispatch])
-
-    const onDelete = useCallback(id => {
-        dispatch(cardDeleted(id))
-
-    }, [dispatch]);
+    if (cards.length === 0) {
+        return <>
+            <h2 className="cardList__title">No images</h2>
+            <button className="restore">Restore</button>
+        </>
+    }
 
     //Render list of cards, if cardList is empty show message
     const renderCardList = (arr) => {
-        if (arr.length === 0) {
-            return <h2 className="cardList__title">No cards</h2>
-        }
-
         return arr.map(({id, image}) => {
             return <Card
                 key={id}
@@ -39,8 +31,11 @@ export const CardList = () => {
     const elements = renderCardList(cards)
 
     return (
-        <ul className="cards">
-            {elements}
-        </ul>
+        <section>
+            <ul className="cards">
+                {elements}
+            </ul>
+            <button className="restore">Restore</button>
+        </section>
     )
 }
