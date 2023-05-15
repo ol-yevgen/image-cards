@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { cardsData } from "../../../App/data/cardsData"
+import { data } from "../../../App/data/cardsData"
 
 const initialState = {
-    cards: cardsData
+    cards: data
 }
 
 export const cardsSlice = createSlice({

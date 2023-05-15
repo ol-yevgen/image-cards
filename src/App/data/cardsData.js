@@ -63,3 +63,5 @@ export const cardsData = [
         image: Img12
     },
 ]
+
+export const data = localStorage.getItem('cards') !== null ? JSON.parse(localStorage.getItem(('cards'))) : cardsData
