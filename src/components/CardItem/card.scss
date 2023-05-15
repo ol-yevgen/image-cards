@@ -1,15 +1,16 @@
 @import "../../App/styles/_variables.scss";
 @import "../../App/styles/mixins.scss";
 .card {
+    position: relative;
     margin: 0 auto;
     width: 200px;
     height: 200px;
 
     border: 5px solid #4d4d4d;
     border-radius: 50%;
-    overflow: hidden;
 
     transition: all 0.3s ease-out;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
@@ -24,14 +25,47 @@
         }
     }
 
-    & > img {
+    & > div {
         width: 100%;
         height: 100%;
+
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         transition: all 0.3s ease-out;
     }
 
-    &:hover > img {
+    &:hover > div {
         transform: rotate(45deg);
+    }
+}
+
+.card > span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 4px;
+        background: #000;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
     }
 }
